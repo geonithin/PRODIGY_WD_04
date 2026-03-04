@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GuardianTrack — Geo Nithin J</title>
+  <meta name="description" content="Child safety tracking system with AI movement prediction, geo-fencing, and emergency features." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="bg-watermark" aria-hidden="true">guard</div>
+
+  <main class="page-main">
+
+    <a href="index.html" class="back-nav">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Back to Projects
+    </a>
+
+    <div class="page-header">
+      <div class="page-header__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      </div>
+      <h1>GuardianTrack</h1>
+      <p>Smart child safety tracking system with AI prediction, geo-fencing, and emergency escalation</p>
+    </div>
+
+    <!-- Status Banner -->
+    <div class="card" style="margin-top:1.5rem; text-align:center;">
+      <span class="status-badge status-badge--progress" style="font-size:1rem; padding:0.5rem 1.25rem;">In Development</span>
+      <p style="margin-top:0.75rem;">GuardianTrack is actively under development. Check back soon for the live demo!</p>
+    </div>
+
+    <!-- Problem Statement -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">The Problem</h2>
+      <div class="card">
+        <p>In a world where child safety concerns are rising, parents and guardians need more than simple GPS apps. They need an intelligent, tamper-resistant system that provides real-time tracking with predictive AI capabilities, geo-fencing zones, and emergency escalation to authorities — all while being impossible for children to disable.</p>
+      </div>
+    </section>
+
+    <!-- Core Features -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Core Features</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Unstoppable Tracking</h3>
+          <p>Children cannot disable their location unless the parent explicitly allows. Ensures continuous monitoring for maximum safety.</p>
+        </div>
+        <div class="card">
+          <h3>Signal/Device Loss Alert</h3>
+          <p>If GPS or internet signal is cut, an instant alert is sent to parents and local police with the last known location.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety Enhancements -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Safety Enhancements</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Geo-Fencing Zones</h3>
+          <p>Parents define safe zones (home, school, playground). Leaving or entering unexpectedly triggers instant alerts.</p>
+        </div>
+        <div class="card">
+          <h3>Battery &amp; Signal Monitor</h3>
+          <p>Alerts parents if device battery drops below 10% or enters a weak-signal area for proactive monitoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Features -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Emergency Features</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>SOS Panic Button</h3>
+          <p>Child can press one button to alert parents &amp; emergency responders with live GPS, and optionally activate microphone/video stream.</p>
+        </div>
+        <div class="card">
+          <h3>Emergency Escalation Mode</h3>
+          <p>If the phone is turned off or forcibly disabled, the system sends last location + timestamp to parents and authorities immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart Technology -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Smart Technology</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>AI Movement Prediction</h3>
+          <p>If updates stop, AI predicts possible movement routes based on last direction &amp; speed using machine learning algorithms.</p>
+        </div>
+        <div class="card">
+          <h3>Offline Logging</h3>
+          <p>Stores location data offline when connectivity is lost and syncs automatically once back online.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Role Management -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Role Management &amp; Privacy</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Role-Based Access</h3>
+          <p>Only verified guardians can control permissions. Multi-level authentication ensures secure access.</p>
+        </div>
+        <div class="card">
+          <h3>Tamper-Proof Control</h3>
+          <p>Children cannot alter or disable tracking features, ensuring continuous protection and monitoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Technology Stack</h2>
+
+      <div class="card">
+        <h3>Project Structure</h3>
+        <pre style="font-size:0.85rem; color:var(--clr-primary); overflow-x:auto;">
+guardiantrack/
+├── backend/           # Node.js Express API (95% complete)
+├── frontend/          # React Web App (80% complete)
+├── postman/           # API testing collection
+└── docs/              # Comprehensive documentation
+        </pre>
+      </div>
+
+      <div class="card" style="margin-top:1rem;">
+        <h3>Frontend</h3>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">React Native / Flutter</span><span class="tag">JavaScript/TypeScript</span><span class="tag">Responsive Design</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>Backend &amp; Database</h3>
+        <div class="tags">
+          <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Firebase / MongoDB</span><span class="tag">Real-Time APIs</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>Maps &amp; Tracking</h3>
+        <div class="tags">
+          <span class="tag">Google Maps API</span><span class="tag">Mapbox</span><span class="tag">GPS Tracking</span><span class="tag">Geo-Fencing</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>Notification System</h3>
+        <div class="tags">
+          <span class="tag">Firebase Cloud Messaging</span><span class="tag">Twilio</span><span class="tag">SMS Alerts</span><span class="tag">Push Notifications</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>Emergency API Integration</h3>
+        <div class="tags">
+          <span class="tag">Police/Authority APIs</span><span class="tag">Mock Endpoints</span><span class="tag">Emergency Services</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Users -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Target Users &amp; Impact</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Parents tracking children</h3>
+          <p>Primary use case for child safety</p>
+        </div>
+        <div class="card">
+          <h3>Families monitoring elderly</h3>
+          <p>Care for senior family members</p>
+        </div>
+        <div class="card">
+          <h3>Schools for student safety</h3>
+          <p>Educational institution monitoring</p>
+        </div>
+        <div class="card">
+          <h3>Emergency response teams</h3>
+          <p>Disaster relief coordination</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Status -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Development Status</h2>
+      <div class="card">
+        <div style="margin-bottom:1.25rem;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+            <strong>Backend API (Node.js + Express)</strong>
+            <span style="color:var(--clr-primary); font-weight:700;">95%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar__fill" style="width:95%;"></div>
+          </div>
+          <p style="font-size:0.8rem; margin-top:0.25rem; opacity:0.7;">Authentication, tracking APIs, notifications, and emergency systems functional</p>
+        </div>
+
+        <div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+            <strong>Frontend Web App (React)</strong>
+            <span style="color:var(--clr-primary); font-weight:700;">80%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar__fill" style="width:80%;"></div>
+          </div>
+          <p style="font-size:0.8rem; margin-top:0.25rem; opacity:0.7;">Core UI components, dashboards, and tracking interfaces implemented</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1rem;">
+        <h3>Next Steps</h3>
+        <ul class="feature-list">
+          <li>Finalize frontend UI and user experience</li>
+          <li>Integrate emergency authority APIs</li>
+          <li>Complete testing and quality assurance</li>
+          <li>Polish documentation and deployment</li>
+          <li>Prepare for production release</li>
+        </ul>
+      </div>
+    </section>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="btn">Back to Projects</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Geo Nithin J. All rights reserved.</p>
+    <p style="font-size:0.75rem; margin-top:0.25rem; opacity:0.6;">Node.js &bull; Express &bull; React &bull; Firebase &bull; Google Maps &bull; Twilio</p>
+  </footer>
+
+</body>
+</html>

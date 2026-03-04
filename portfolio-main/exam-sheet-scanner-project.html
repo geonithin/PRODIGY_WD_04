@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Sheet Scanner — Geo Nithin J</title>
+  <meta name="description" content="AI-powered exam sheet scanning system using Google Gemini AI for OCR data extraction." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="bg-watermark" aria-hidden="true">scanner</div>
+
+  <main class="page-main">
+
+    <a href="index.html" class="back-nav">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Back to Projects
+    </a>
+
+    <div class="page-header">
+      <div class="page-header__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/></svg>
+      </div>
+      <h1>Exam Sheet Scanner</h1>
+      <p>AI-powered exam sheet scanning system using Google Gemini AI for intelligent OCR data extraction</p>
+    </div>
+
+    <!-- Live Demo -->
+    <div style="text-align:center; margin-top:1.5rem;">
+      <a href="https://examsheetscan.vercel.app/" target="_blank" class="btn">View Live Demo &rarr;</a>
+    </div>
+
+    <!-- Overview -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Project Overview</h2>
+      <div class="card">
+        <p>The Exam Sheet Scanner is a comprehensive system that leverages Google Gemini AI for OCR-powered data extraction from exam answer sheets. It supports multiple input methods including camera capture, file upload, and manual entry, with a hierarchical dashboard organized by Department, Year, and Section.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Key Features</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Multi-Method Input</h3>
+          <ul class="feature-list">
+            <li>Camera capture for real-time scanning</li>
+            <li>File upload (image formats)</li>
+            <li>Manual data entry as fallback</li>
+            <li>Batch processing capabilities</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>AI-Powered OCR</h3>
+          <ul class="feature-list">
+            <li>Google Gemini AI (gemini-1.5-flash)</li>
+            <li>Intelligent text extraction</li>
+            <li>Automatic field recognition</li>
+            <li>High accuracy data parsing</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Hierarchical Dashboard</h3>
+          <ul class="feature-list">
+            <li>Department → Year → Section view</li>
+            <li>Advanced search and filtering</li>
+            <li>Record management interface</li>
+            <li>Performance analytics</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Data Management</h3>
+          <ul class="feature-list">
+            <li>PostgreSQL with JSONB storage</li>
+            <li>Flexible marks data structure</li>
+            <li>Auto-calculation of totals &amp; grades</li>
+            <li>Indexed queries for fast performance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Technology Stack</h2>
+      <div class="card">
+        <h3>Frontend</h3>
+        <div class="tags">
+          <span class="tag">Remix</span><span class="tag">React 18</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Lucide React</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>Backend &amp; Server</h3>
+        <div class="tags">
+          <span class="tag">Remix Server</span><span class="tag">Node.js</span><span class="tag">TypeScript</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>Database &amp; Storage</h3>
+        <div class="tags">
+          <span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">JSONB</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>AI &amp; Machine Learning</h3>
+        <div class="tags">
+          <span class="tag">Google Gemini AI</span><span class="tag">gemini-1.5-flash</span><span class="tag">OCR</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>Build &amp; Deployment</h3>
+        <div class="tags">
+          <span class="tag">Vite</span><span class="tag">Vercel</span><span class="tag">Node.js Hosting</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Structure -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Data Structure</h2>
+      <div class="card">
+        <h3>Exam Sheet Fields (13+ Fields)</h3>
+        <div class="card-grid" style="margin-top:0.75rem;">
+          <ul class="feature-list">
+            <li>Register Number — Student identification</li>
+            <li>Student Name — Full name</li>
+            <li>Department — Academic department</li>
+            <li>Year — Academic year</li>
+            <li>Section — Class section</li>
+            <li>Exam Type — Internal/External/etc.</li>
+            <li>Subject Code — Course identifier</li>
+          </ul>
+          <ul class="feature-list">
+            <li>Subject Name — Course name</li>
+            <li>Marks Data (JSONB) — Flexible storage</li>
+            <li>Total Marks — Sum of all marks</li>
+            <li>Grade — Final grade</li>
+            <li>Timestamps — Created/Updated dates</li>
+            <li>Image URL — Scanned sheet reference</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Users -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Target Users &amp; Benefits</h2>
+      <div class="card-grid">
+        <div class="card" style="text-align:center;">
+          <h3>Educational Institutions</h3>
+          <p>Digitize exam sheets quickly, reducing manual data entry errors and saving time.</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <h3>Administrative Staff</h3>
+          <p>Streamlined exam record management with powerful search and filtering capabilities.</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <h3>Faculty Members</h3>
+          <p>Quick access to student performance data with organized hierarchical views.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Home Page</h3>
+          <img class="project-img" src="images/projects/exam-sheet-scanner/examscan-home.jpg" alt="Home Page" />
+          <p>Landing page with multi-method input options</p>
+        </div>
+        <div class="card">
+          <h3>Dashboard</h3>
+          <img class="project-img" src="images/projects/exam-sheet-scanner/examscan-dashboard.jpg" alt="Dashboard" />
+          <p>Hierarchical dashboard organized by Department → Year → Section</p>
+        </div>
+        <div class="card">
+          <h3>Student Details</h3>
+          <img class="project-img" src="images/projects/exam-sheet-scanner/examscan-studentdetails.jpg" alt="Student Details" />
+          <p>Student exam records with extracted data and detailed information</p>
+        </div>
+        <div class="card">
+          <h3>Manual Entry</h3>
+          <img class="project-img" src="images/projects/exam-sheet-scanner/examscan-manualentry.jpg" alt="Manual Entry Form" />
+          <p>Comprehensive manual data entry form with full field validation</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="https://examsheetscan.vercel.app/" target="_blank" class="btn">View Live Demo &rarr;</a>
+      <a href="index.html" class="btn" style="margin-left:0.5rem;">Back to Projects</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Geo Nithin J. All rights reserved.</p>
+    <p style="font-size:0.75rem; margin-top:0.25rem; opacity:0.6;">Remix &bull; React &bull; TypeScript &bull; Supabase &bull; Google Gemini AI &bull; Tailwind CSS</p>
+  </footer>
+
+</body>
+</html>

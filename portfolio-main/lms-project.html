@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Management System — Geo Nithin J</title>
+  <meta name="description" content="A full-featured library management system with real-time messaging, Google Calendar integration, and OAuth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="bg-watermark" aria-hidden="true">library</div>
+
+  <main class="page-main">
+
+    <a href="index.html" class="back-nav">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Back to Projects
+    </a>
+
+    <div class="page-header">
+      <div class="page-header__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+      </div>
+      <h1>Library Management System</h1>
+      <p>A full-featured library management system with real-time messaging, Google Calendar integration, and dual authentication</p>
+    </div>
+
+    <!-- Live Demo -->
+    <div style="text-align:center; margin-top:1.5rem;">
+      <a href="https://lms-geo-nithin-js-projects.vercel.app/" target="_blank" class="btn">View Live Demo &rarr;</a>
+    </div>
+
+    <!-- Metrics -->
+    <div class="stats-grid" style="margin-top:2rem;">
+      <div class="stat-card">
+        <div class="stat-card__value">8</div>
+        <div class="stat-card__label">Database Tables</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value">95%+</div>
+        <div class="stat-card__label">TypeScript Coverage</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value">SSR</div>
+        <div class="stat-card__label">Server-Side Rendering</div>
+      </div>
+    </div>
+
+    <!-- Student Features -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Student Features</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Student Dashboard</h3>
+          <ul class="feature-list">
+            <li>Personal reading statistics</li>
+            <li>Active loans with due dates</li>
+            <li>Fine calculation and status</li>
+            <li>Quick access to actions</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Book Discovery</h3>
+          <ul class="feature-list">
+            <li>Advanced search and filtering</li>
+            <li>Book availability status</li>
+            <li>Request system with approvals</li>
+            <li>Review and rating system (1-5 stars)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Communication System</h3>
+          <ul class="feature-list">
+            <li>Receive messages from library staff</li>
+            <li>Real-time notification badges</li>
+            <li>Mark messages as read</li>
+            <li>Categorized notification center</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Google Calendar Integration</h3>
+          <ul class="feature-list">
+            <li>One-click OAuth connection</li>
+            <li>Automatic due date events</li>
+            <li>Customizable reminder settings</li>
+            <li>Sync status monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Staff Features -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Staff &amp; Admin Features</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Staff Dashboard</h3>
+          <ul class="feature-list">
+            <li>Library operation analytics</li>
+            <li>User management interface</li>
+            <li>Book inventory overview</li>
+            <li>Overdue book monitoring</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>User Management</h3>
+          <ul class="feature-list">
+            <li>View all registered students</li>
+            <li>Edit user profiles and information</li>
+            <li>Manage roles and account status</li>
+            <li>View activity and loan history</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Advanced Messaging</h3>
+          <ul class="feature-list">
+            <li>Compose to multiple users</li>
+            <li>Real-time user search</li>
+            <li>Message categorization</li>
+            <li>Bulk messaging capabilities</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Book Management</h3>
+          <ul class="feature-list">
+            <li>Add, edit, and delete books</li>
+            <li>Manage availability and stock</li>
+            <li>Approve/reject booking requests</li>
+            <li>Track loan records with due dates</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Technology Stack</h2>
+      <div class="card">
+        <h3>Frontend</h3>
+        <div class="tags">
+          <span class="tag">React Router v7</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Server-Side Rendering</span><span class="tag">Vite</span>
+        </div>
+        <p style="margin-top:0.75rem;">Built with React Router v7 featuring built-in SSR, file-based routing, and type-safe routing. TypeScript provides 95%+ type coverage.</p>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>Backend &amp; Database</h3>
+        <div class="tags">
+          <span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Row Level Security</span><span class="tag">Real-Time Subscriptions</span>
+        </div>
+        <p style="margin-top:0.75rem;">Supabase provides managed PostgreSQL with instant RESTful APIs, real-time subscriptions, and built-in authentication.</p>
+        <div style="margin-top:0.75rem; font-size:0.85rem;">
+          <strong>Database Schema (8 tables):</strong> auth_users, books, booking_requests, loan_records, messages, notifications, reviews, library_settings
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem;">
+        <h3>External Integrations</h3>
+        <div class="tags">
+          <span class="tag">Google Calendar API</span><span class="tag">Google OAuth 2.0</span><span class="tag">googleapis v160.0.0</span>
+        </div>
+        <p style="margin-top:0.75rem;">Google Calendar API for automated due date reminders with OAuth 2.0 authentication, token management, and secure storage.</p>
+      </div>
+    </section>
+
+    <!-- Key Achievements -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Key Technical Achievements</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Dual Authentication</h3><p>Custom session-based auth alongside Google OAuth with seamless session restoration.</p></div>
+        <div class="card"><h3>Real-Time Features</h3><p>Supabase real-time subscriptions for instant updates without manual refreshes.</p></div>
+        <div class="card"><h3>Server-Side Rendering</h3><p>React Router v7 SSR for improved performance, SEO, and faster initial loads.</p></div>
+        <div class="card"><h3>Complex State Management</h3><p>Multi-role state management with proper data isolation and permissions.</p></div>
+        <div class="card"><h3>Responsive Design</h3><p>Fully responsive across desktop, tablet, and mobile devices.</p></div>
+        <div class="card"><h3>Production Ready</h3><p>Deployed on Vercel with automatic scaling and global CDN delivery.</p></div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section style="margin-top:2rem;">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Library Dashboard</h3>
+          <img class="project-img" src="images/projects/lms/library-dashboard.png" alt="Library Dashboard" />
+          <p>Main dashboard for managing library operations and viewing analytics</p>
+        </div>
+        <div class="card">
+          <h3>Book Catalog</h3>
+          <img class="project-img" src="images/projects/lms/lms-courses.png" alt="Book Catalog" />
+          <p>Browse and search through the comprehensive book catalog</p>
+        </div>
+        <div class="card">
+          <h3>Student View</h3>
+          <img class="project-img" src="images/projects/lms/lms-student-view.png" alt="Student View" />
+          <p>Track book borrowings and returns with due date management</p>
+        </div>
+        <div class="card">
+          <h3>Calendar Integration</h3>
+          <img class="project-img" src="images/projects/lms/lms-google-integration.png" alt="Google Calendar Integration" />
+          <p>Google Calendar integration for scheduling and reminders</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="https://lms-geo-nithin-js-projects.vercel.app/" target="_blank" class="btn">View Live Demo &rarr;</a>
+      <a href="index.html" class="btn" style="margin-left:0.5rem;">Back to Projects</a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Geo Nithin J. All rights reserved.</p>
+    <p style="font-size:0.75rem; margin-top:0.25rem; opacity:0.6;">React Router v7 &bull; TypeScript &bull; Supabase &bull; Tailwind CSS &bull; Google APIs</p>
+  </footer>
+
+</body>
+</html>
