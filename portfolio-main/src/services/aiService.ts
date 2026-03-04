@@ -89,63 +89,63 @@ export async function getMockAIResponse(message: string): Promise<string> {
   return `That's an interesting question! I'd love to help with that. As a CS student who's always curious about learning new things, I enjoy discussing all kinds of topics! While I might not have access to the latest information like ChatGPT, I'm happy to share my thoughts and perspectives. Feel free to ask me about anything - whether it's tech-related, general knowledge, or just casual conversation!`;
 }
 
-// Google Gemini API integration (free and powerful!)
+// OpenRouter API integration (free models available!)
 export async function getAIResponse(message: string, context: string): Promise<string> {
   try {
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-    
+    const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
+
     if (!apiKey) {
-      console.log('No Gemini API key found - using mock responses');
+      console.log('No OpenRouter API key found - using mock responses');
       return await getMockAIResponse(message);
     }
 
-    const model = import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.5-flash';
-    console.log('Calling Google Gemini API with model:', model);
+    const model = import.meta.env.VITE_OPENROUTER_MODEL || 'meta-llama/llama-3.3-70b-instruct:free';
+    console.log('Calling OpenRouter API with model:', model);
 
-    // Google Gemini API format
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          contents: [
-            {
-              parts: [
-                {
-                  text: `${context}\n\nUser question: ${message}`
-                }
-              ]
-            }
-          ],
-          generationConfig: {
-            temperature: 0.7,
-            maxOutputTokens: 1000,
-          }
-        })
-      }
-    );
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+        'HTTP-Referer': window.location.origin,
+        'X-Title': 'Geo Nithin Portfolio',
+      },
+      body: JSON.stringify({
+        model,
+        messages: [
+          {
+            role: 'system',
+            content: context,
+          },
+          {
+            role: 'user',
+            content: message,
+          },
+        ],
+        temperature: 0.7,
+        max_tokens: 1000,
+      }),
+    });
 
     const data = await response.json();
-    console.log('Gemini response status:', response.status);
+    console.log('OpenRouter response status:', response.status);
 
     if (!response.ok) {
-      console.error('Gemini API error:', data);
+      console.error('OpenRouter API error:', JSON.stringify(data, null, 2));
+      console.error('Status:', response.status, '| Model:', model);
       return await getMockAIResponse(message);
     }
 
-    const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    const aiText = data.choices?.[0]?.message?.content;
     if (aiText) {
       return aiText;
     }
-    
-    console.warn('No content in Gemini response, using mock');
+
+    console.warn('No content in OpenRouter response, using mock');
     return await getMockAIResponse(message);
-    
+
   } catch (error) {
-    console.error('Error calling Gemini API:', error);
+    console.error('Error calling OpenRouter API:', error);
     return await getMockAIResponse(message);
   }
 }
